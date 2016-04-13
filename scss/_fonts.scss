@@ -1,0 +1,21 @@
+$font-family-sans-serif: 'Raleway', sans-serif !default;
+$font-path: '../fonts/';
+
+@mixin font-face($name, $filename, $weight, $style) {
+    $filename: $font-path + $filename;
+    @font-face {
+        font-family: $name;
+        src: url('#{$filename}.eot?#iefix') format('embedded-opentype'),
+             url('#{$filename}.woff') format('woff'),
+             url('#{$filename}.ttf')  format('truetype'),
+             url('#{$filename}.svg##{$filename}') format('svg');
+        font-weight: $weight;
+        font-style: $style;
+    }
+
+}
+
+@include font-face('Raleway', 'Raleway-Regular', normal, normal);
+@include font-face('Raleway', 'Raleway-Italic', normal, italic);
+@include font-face('Raleway', 'Raleway-Bold', bold, normal);
+@include font-face('Raleway', 'Raleway-BoldItalic', bold, italic);
