@@ -15,15 +15,15 @@
 <body ng-app="starter">
 
   <ion-pane>
-    <ion-header-bar class="bar-stable">
-      <h1 class="title"></h1>
-    </ion-header-bar>
     <ion-content ng-controller="mainController">
-      <ion-list ng-repeat="(key,platform) in platforms">
+      <ion-list class="teamList" ng-repeat="(key,platform) in platforms">
         <h2 class="title">{{key}}</h2>
-        <ion-item ng-repeat="people in platform">
-            <img class="item__photo" ng-src="{{ people.photoUrl && 'http://assessments.wearetriple.com/photos/' + people.photoUrl || 'img/profile-icon.png'}}"/>
-            <div class="item--name" ng-bind="people.firstName + ' ' + people.lastName"></div>
+        <ion-item class="teamList-item" ng-repeat="people in platform">
+            <div
+                class="teamList-photo"
+                style="background-image: url({{ people.photoUrl && 'http://assessments.wearetriple.com/photos/' + people.photoUrl || 'img/profile-icon.png'}})">
+            </div>
+            <div class="teamList-name" ng-bind="people.firstName + ' ' + people.lastName"></div>
         </ion-item>
       </ion-list>
     </ion-content>
