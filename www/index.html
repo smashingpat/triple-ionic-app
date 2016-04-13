@@ -22,7 +22,7 @@
       <ion-list ng-repeat="(key,platform) in platforms">
         <h2 class="title">{{key}}</h2>
         <ion-item ng-repeat="people in platform">
-            <img class="item__photo" ng-src="http://assessments.wearetriple.com/photos/{{people.photoUrl}}"/>
+            <img class="item__photo" ng-src="{{ people.photoUrl && 'http://assessments.wearetriple.com/photos/' + people.photoUrl || 'img/profile-icon.png'}}"/>
             <div class="item--name" ng-bind="people.firstName + ' ' + people.lastName"></div>
         </ion-item>
       </ion-list>
