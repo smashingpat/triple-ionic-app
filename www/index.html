@@ -17,7 +17,7 @@
   <ion-pane>
     <ion-content ng-controller="mainController">
       <ion-list class="teamList" ng-repeat="(key,platform) in platforms">
-        <h2 class="title">{{key}}</h2>
+        <h2 class="title" ng-bind="key"></h2>
         <ion-item class="teamList-item" ng-repeat="people in platform">
             <div
                 class="teamList-photo"
