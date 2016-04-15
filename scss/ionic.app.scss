@@ -13,8 +13,13 @@ img {
 }
 
 .teamList {
-    width: 100%;
-
+    &-intro {
+        padding: 10vh $padding-base-horizontal;
+        font-size: 2em;
+        font-weight: bold;
+        text-align: center;
+        background: url('../img/triple-logo.png') no-repeat center center;
+    }
     &-title {
         background: $stable;
         padding: $padding-base-vertical 0;
@@ -25,10 +30,10 @@ img {
         display: flex;
         align-items: center;
         padding: 0 $padding-base-horizontal;
-        border-bottom: $button-stable-border;
+        border-bottom: 1px solid $stable;
     }
     &-itemWrap {
-        border-top: $button-stable-border;
+        border-top: 1px solid $stable;
     }
     &-name {
     }
@@ -37,7 +42,7 @@ img {
         height: 60px;
         background-size: cover;
         margin-right: 10px;
-        border-right: $button-stable-border;
+        border-right: 1px solid $stable;
     }
 }
 
@@ -58,16 +63,21 @@ img {
         img {display: block;}
     }
     &-info {
-        padding: $padding-base-vertical $padding-base-horizontal;
+        padding: 0 $padding-base-horizontal;
         border-bottom: 1px solid $stable;
         display: block;
         display: flex;
     }
     &-infoLabel {
         width: 100px;
+        padding: $padding-base-vertical 0;
+        padding-right: $padding-base-horizontal;
+        border-right: 1px solid $stable;
     }
     &-infoText {
         font-weight: bold;
+        padding: $padding-base-vertical 0;
+        padding-left: 5px;
     }
     &-link {
         color: black;
