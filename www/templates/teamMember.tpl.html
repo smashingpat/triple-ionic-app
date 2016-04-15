@@ -1,12 +1,27 @@
 <ion-view>
     <ion-content>
-        <a ui-sref="app.team">Go back to team</a>
         <div class="teamMember">
-            <div class="teamMember-name teamMember-info" ng-bind="member.data.firstName + ' ' + member.data.lastName"></div>
+            <a class="teamMember-backLink" ui-sref="app.team">
+                <i class="fa fa-angle-left" aria-hidden="true"></i>
+            </a>
             <div class="teamMember-photo">
                 <img ng-src="{{member.data.photoUrl}}" alt="">
             </div>
-            <div class="teamMember-info" ng-bind="member.data.emailAddress" ng-href="mailto:{{member.data.emailAddress}}"></div>
+            <div class="teamMember-name teamMember-info">
+                <div class="teamMember-infoLabel">Name: </div>
+                <div class="teamMember-infoText">{{member.data.firstName + ' ' + member.data.lastName}}</div>
+            </div>
+            <div class="teamMember-name teamMember-info">
+                <div class="teamMember-infoLabel">Platform: </div>
+                <div class="teamMember-infoText">{{member.data.platform}}</div>
+            </div>
+            <a
+                class="teamMember-info teamMember-link"
+                ng-if="member.data.emailAddress"
+                ng-href="mailto:{{member.data.emailAddress}}">
+                <div class="teamMember-infoLabel">Name: </div>
+                <div class="teamMember-infoText">{{member.data.emailAddress}}</div>
+            </a>
         </div>
     </ion-content>
 </ion-view>

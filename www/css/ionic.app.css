@@ -9772,13 +9772,40 @@ img {
   .teamList-item {
     display: flex;
     align-items: center;
-    padding: 0 5px;
-    border-bottom: 1px solid #f8f8f8; }
+    padding: 0 12px;
+    border-bottom: #b2b2b2; }
   .teamList-itemWrap {
-    border-top: 1px solid #f8f8f8; }
+    border-top: #b2b2b2; }
   .teamList-photo {
     width: 60px;
     height: 60px;
     background-size: cover;
     margin-right: 10px;
-    border-right: 1px solid #f8f8f8; }
+    border-right: #b2b2b2; }
+
+.teamMember {
+  position: relative; }
+  .teamMember-backLink {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: 3em;
+    display: block;
+    width: 1em;
+    text-align: center; }
+  .teamMember-photo {
+    border-bottom: 1px solid #f8f8f8; }
+    .teamMember-photo img {
+      display: block; }
+  .teamMember-info {
+    padding: 6px 12px;
+    border-bottom: 1px solid #f8f8f8;
+    display: block;
+    display: flex; }
+  .teamMember-infoLabel {
+    width: 100px; }
+  .teamMember-infoText {
+    font-weight: bold; }
+  .teamMember-link {
+    color: black;
+    text-decoration: none; }

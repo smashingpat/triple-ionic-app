@@ -24,11 +24,11 @@ img {
     &-item {
         display: flex;
         align-items: center;
-        padding: 0 5px;
-        border-bottom: 1px solid $stable;
+        padding: 0 $padding-base-horizontal;
+        border-bottom: $button-stable-border;
     }
     &-itemWrap {
-        border-top: 1px solid $stable;
+        border-top: $button-stable-border;
     }
     &-name {
     }
@@ -37,6 +37,40 @@ img {
         height: 60px;
         background-size: cover;
         margin-right: 10px;
-        border-right: 1px solid $stable;
+        border-right: $button-stable-border;
+    }
+}
+
+.teamMember {
+    position: relative;
+
+    &-backLink {
+        position: absolute;
+        top: $content-padding;
+        left: $content-padding;
+        font-size: 3em;
+        display: block;
+        width: 1em;
+        text-align: center;
+    }
+    &-photo {
+        border-bottom: 1px solid $stable;
+        img {display: block;}
+    }
+    &-info {
+        padding: $padding-base-vertical $padding-base-horizontal;
+        border-bottom: 1px solid $stable;
+        display: block;
+        display: flex;
+    }
+    &-infoLabel {
+        width: 100px;
+    }
+    &-infoText {
+        font-weight: bold;
+    }
+    &-link {
+        color: black;
+        text-decoration: none;
     }
 }

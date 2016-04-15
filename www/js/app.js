@@ -97,7 +97,7 @@ function memberController($stateParams, dataservice) {
         var filteredData = data.filter(function(value) {
             return value.id == id
         })[0];
-        console.log(filteredData);
+
         vm.data = filteredData;
     })
 }
