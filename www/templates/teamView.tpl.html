@@ -1,0 +1,17 @@
+<ion-view>
+    <ion-content>
+        <div class="teamList">
+            <div class="teamList-itemWrap">
+                <div ng-repeat="member in team.members">
+                    <div class="teamList-item" ui-sref="app.team.member({ id: member.id, data: member })">
+                        <div
+                            class="teamList-photo"
+                            style="background-image: url({{ member.photoUrl }})">
+                        </div>
+                        <div class="teamList-name" ng-bind="member.firstName + ' ' + member.lastName"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

@@ -1,5 +1,6 @@
 @import 'variables';
 @import "fonts";
+@import "animations";
 
 // Include all of Ionic
 @import "www/lib/ionic/scss/ionic";
@@ -12,15 +13,30 @@ img {
 }
 
 .teamList {
+    width: 100%;
+
+    &-title {
+        background: $stable;
+        padding: $padding-base-vertical 0;
+        text-align: center;
+        .title { margin-bottom: 0; }
+    }
     &-item {
         display: flex;
         align-items: center;
+        padding: 0 5px;
+        border-bottom: 1px solid $stable;
+    }
+    &-itemWrap {
+        border-top: 1px solid $stable;
+    }
+    &-name {
     }
     &-photo {
-        width: 50px;
-        height: 50px;
+        width: 60px;
+        height: 60px;
         background-size: cover;
         margin-right: 10px;
-        border-radius: 50%;
+        border-right: 1px solid $stable;
     }
 }

@@ -23,6 +23,22 @@
   font-weight: bold;
   font-style: italic; }
 
+.teamList-photo.ng-enter {
+  /* standard transition code */
+  transition: 1s linear all;
+  opacity: 0; }
+
+.teamList-photo.ng-enter-stagger {
+  /* this will have a 100ms delay between each successive leave animation */
+  transition-delay: 0.1s;
+  /* As of 1.4.4, this must always be set: it signals ngAnimate
+to not accidentally inherit a delay property from another CSS class */
+  transition-duration: 0s; }
+
+.teamList-photo.ng-enter.ng-enter-active {
+  /* standard transition styles */
+  opacity: 1; }
+
 /*!
   Ionicons, v2.0.1
   Created by Ben Sperry for the Ionic Framework, http://ionicons.com/
@@ -9745,13 +9761,24 @@ img {
   max-width: auto;
   height: auto; }
 
-.teamList-item {
-  display: flex;
-  align-items: center; }
-
-.teamList-photo {
-  width: 50px;
-  height: 50px;
-  background-size: cover;
-  margin-right: 10px;
-  border-radius: 50%; }
+.teamList {
+  width: 100%; }
+  .teamList-title {
+    background: #f8f8f8;
+    padding: 6px 0;
+    text-align: center; }
+    .teamList-title .title {
+      margin-bottom: 0; }
+  .teamList-item {
+    display: flex;
+    align-items: center;
+    padding: 0 5px;
+    border-bottom: 1px solid #f8f8f8; }
+  .teamList-itemWrap {
+    border-top: 1px solid #f8f8f8; }
+  .teamList-photo {
+    width: 60px;
+    height: 60px;
+    background-size: cover;
+    margin-right: 10px;
+    border-right: 1px solid #f8f8f8; }
