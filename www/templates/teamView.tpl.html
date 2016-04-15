@@ -3,9 +3,10 @@
         <div class="teamList-intro">
             Meet our team
         </div>
-        <div class="teamList">
+        <div class="teamList" ng-repeat="platform in team.platforms">
+            <div class="teamList-title">{{platform}}</div>
             <div class="teamList-itemWrap">
-                <div ng-repeat="member in team.members">
+                <div ng-repeat="member in team.filterByPlatform(platform)">
                     <div class="teamList-item" ui-sref="app.team.member({ id: member.id, data: member })">
                         <div
                             class="teamList-photo"

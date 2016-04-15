@@ -18,6 +18,8 @@ angular
 
 function angularConfig($stateProvider, $urlRouterProvider) {
     // if 404 then go to '/page'
+
+    $urlRouterProvider.otherwise('/team');
     $urlRouterProvider.when('/team/member', '/team');
 
     // Stateprovider
@@ -81,10 +83,19 @@ function dataServiceFactory($http) {
 
 function teamController($http, dataservice) {
     var vm = this;
-    vm.members;
+    vm.platforms = ['iOS', 'Android', 'Windows'];
+    vm.members
     dataservice.getData(function(data) {
         vm.members = data;
     })
+
+    vm.filterByPlatform = function(platform) {
+        if(vm.members && platform) {
+            return vm.members.filter(function(value) {
+                return value.platform == platform
+            });
+        }
+    }
 }
 
 function memberController($stateParams, dataservice) {

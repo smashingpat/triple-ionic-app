@@ -22,8 +22,8 @@ img {
     }
     &-title {
         background: $stable;
-        padding: $padding-base-vertical 0;
-        text-align: center;
+        padding: $padding-base-vertical $padding-base-horizontal;
+        font-weight: bold;
         .title { margin-bottom: 0; }
     }
     &-item {
