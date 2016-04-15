@@ -9800,7 +9800,8 @@ img {
     font-size: 3em;
     display: block;
     width: 1em;
-    text-align: center; }
+    text-align: center;
+    color: #7CCAD7; }
   .teamMember-photo {
     border-bottom: 1px solid #f8f8f8; }
     .teamMember-photo img {
